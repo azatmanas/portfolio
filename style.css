@@ -14,7 +14,7 @@
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   transition: all 0.2s linear;
   line-height: 1.5;
 }
@@ -37,7 +37,7 @@ body {
 section {
   padding: 2rem;
   margin: 0 auto;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   max-width: 1200px;
   display: flex;
   align-items: center;
@@ -354,7 +354,7 @@ header .follow a:hover {
   left: 1rem;
   font-size: 2.5rem;
   color: #333;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .portfolio .box-container .box .icons {

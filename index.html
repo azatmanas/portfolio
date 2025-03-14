@@ -296,8 +296,12 @@ Tech Stack: html, css, Javascript, ReactJS, NodeJS, TypeScript, Tailwind, Redux,
 
     <!-- footer section  -->
     <footer class="footer">
-      created by <span> Azat Manas </span> | all rights reserved!
+      Created by <span>Azat Manas</span> | <span id="year"></span> All rights reserved!
     </footer>
+    
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
     <!-- custom js file link  -->
     <script src="index.js"></script>

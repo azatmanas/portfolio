@@ -6,18 +6,19 @@ import Experience from "./Experience";
 import Skills from "./Skills";
 import Portfolio from "./Portfolio";
 import Home from "./Home";
-import { useState } from "react";
+import About from "./About";
+
 function App() {
   return (
     <div className="App">
       <Header />
-
       <Home />
-      <Contact />
-      <Footer />
+      <About />
       <Experience />
       <Skills />
       <Portfolio />
+      <Contact />
+      <Footer />
     </div>
   );
 }

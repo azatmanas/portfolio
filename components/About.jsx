@@ -1,3 +1,5 @@
+import React from "react";
+
 const About = () => {
   return (
     <section className="about" id="about">
@@ -56,12 +58,14 @@ const About = () => {
               </div>
             </div>
 
-            <a href="./images/SWE.pdf" className="btn">
-              Download CV
-            </a>
-            <a href="#" className="btn">
-              Hire Me
-            </a>
+            <div className="action-buttons">
+              <a href="./images/SWE.pdf" className="btn" download>
+                Download CV
+              </a>
+              <a href="#contact" className="btn">
+                Hire Me
+              </a>
+            </div>
           </div>
         </div>
       </div>

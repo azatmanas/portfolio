@@ -1,48 +1,65 @@
 import React from "react";
 
+const SOCIAL_LINKS = [
+  {
+    url: "https://www.instagram.com/azar_manasson/",
+    iconClass: "fab fa-instagram",
+    label: "Instagram",
+  },
+  {
+    url: "https://www.linkedin.com/in/azat-manas-264b14bb/",
+    iconClass: "fab fa-linkedin",
+    label: "LinkedIn",
+  },
+  {
+    url: "https://github.com/",
+    iconClass: "fab fa-github",
+    label: "GitHub",
+  },
+];
+
+const NAV_ITEMS = [
+  { id: "home", label: "Home" },
+  { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
+  { id: "experience", label: "Experience" },
+  { id: "portfolio", label: "Portfolio" },
+  { id: "contact", label: "Contact" },
+];
+
 const Header = () => {
   return (
     <header className="flex justify-between items-center p-4 bg-gray-900 text-white">
-      <a href="#" className="text-2xl font-bold">
-        <span className="text-blue-400">azat</span> manas
-      </a>
+      {/* Logo/Brand */}
+      <div className="logo">
+        <a href="#" className="text-2xl font-bold">
+          <span className="text-blue-400">azat</span> manas
+        </a>
+      </div>
 
-      <nav className="space-x-4">
-        <a href="#home" className="hover:text-blue-400">
-          Home
-        </a>
-        <a href="#about" className="hover:text-blue-400">
-          About
-        </a>
-        <a href="#skills" className="hover:text-blue-400">
-          Skills
-        </a>
-        <a href="#experience" className="hover:text-blue-400">
-          Experience
-        </a>
-        <a href="#portfolio" className="hover:text-blue-400">
-          Portfolio
-        </a>
-        <a href="#contact" className="hover:text-blue-400">
-          Contact
-        </a>
+      {/* Navigation */}
+      <nav className="navbar">
+        {NAV_ITEMS.map((item) => (
+          <a key={item.id} href={`#${item.id}`} className="hover:text-blue-400">
+            {item.label}
+          </a>
+        ))}
       </nav>
 
-      <div className="space-x-3">
-        <a
-          href="https://www.facebook.com/azatmanasov10"
-          className="fab fa-facebook-f"
-        ></a>
-        <a href="https://twitter.com/Azatmanas" className="fab fa-twitter"></a>
-        <a
-          href="https://www.instagram.com/azar_manasson/"
-          className="fab fa-instagram"
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/azat-manas-264b14bb/"
-          className="fab fa-linkedin"
-        ></a>
-        <a href="https://github.com/" className="fab fa-github"></a>
+      {/* Social Links */}
+      <div className="social-links">
+        {SOCIAL_LINKS.map((link) => (
+          <a
+            key={link.url}
+            href={link.url}
+            className={`${link.iconClass} mx-2 hover:text-blue-400`}
+            aria-label={link.label}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="sr-only">{link.label}</span>
+          </a>
+        ))}
       </div>
     </header>
   );

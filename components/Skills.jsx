@@ -20,9 +20,9 @@ const Skills = () => {
           <div className="box">
             <img src="./images/react.png" alt="React" />
           </div>
-          <div className="box">
+          {/* <div className="box">
             <img src="./images/ts.png" alt="TypeScript" />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

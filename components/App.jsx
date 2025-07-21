@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "./Header";
-import Contact from "./Contact";
+import Contact from "./Contact/Contact";
 import Footer from "./Footer";
 import Experience from "./Experience";
 import Skills from "./Skills";
@@ -14,8 +14,8 @@ function App() {
       <Header />
       <Home />
       <About />
-      <Experience />
       <Skills />
+      <Experience />
       <Portfolio />
       <Contact />
       <Footer />

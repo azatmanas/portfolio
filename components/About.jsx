@@ -14,7 +14,7 @@ const About = () => {
           </div>
 
           <div className="content">
-            <h3>My name is Azat & I am a Frontend Developer</h3>
+            <h3>My name is Azat & I am a Full-stack Developer</h3>
             <p>
               Since beginning my journey, I have enjoyed learning new tech
               skills. I'm constantly pushing my limits and challenging myself to
@@ -28,7 +28,7 @@ const About = () => {
                   <span>Gender: </span> Male
                 </p>
                 <p>
-                  <span>Born: </span> Kyrgyzstan
+                  <span>Born: </span> Kyrgyz Republic
                 </p>
                 <p>
                   <span>Language: </span> Kyrgyz, Russian, English

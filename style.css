@@ -14,7 +14,6 @@
   outline: none;
   border: none;
   text-decoration: none;
-  /* text-transform: capitalize; */
   transition: all 0.2s linear;
   line-height: 1.5;
 }
@@ -37,7 +36,6 @@ body {
 section {
   padding: 2rem;
   margin: 0 auto;
-  /* min-height: 100vh; */
   max-width: 1200px;
   display: flex;
   align-items: center;
@@ -381,7 +379,7 @@ header .follow a:hover {
   color: #fff;
 }
 
-.contact .icons-container {
+/* .contact .icons-container {
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
@@ -462,7 +460,7 @@ header .follow a:hover {
 .contact .row form .btn {
   margin-top: 0;
   margin-bottom: 1.5rem;
-}
+} */
 
 .footer {
   margin-top: 2rem;

@@ -7,8 +7,9 @@ const Home = () => {
           I am <span>Azat</span>
         </h3>
         <p className="info">
-          Frontend web developer with a strong passion for discovery and
-          innovation
+          "Full-stack web developer with a strong passion for discovery,
+          innovation, and building seamless digital experiences from front to
+          back end."
         </p>
         <a href="#about" className="btn">
           About me

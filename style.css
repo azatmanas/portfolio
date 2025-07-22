@@ -462,6 +462,27 @@ header .follow a:hover {
   margin-bottom: 1.5rem;
 } */
 
+.follow {
+  display: flex;
+  justify-content: center; /* or 'flex-start' if you want left-aligned */
+  gap: 1rem; /* Adjust this value for spacing */
+  margin: 2rem 0; /* Optional: adds vertical spacing */
+}
+
+.follow a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 50%;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
 .footer {
   margin-top: 2rem;
   font-size: 2rem;

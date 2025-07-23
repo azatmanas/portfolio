@@ -5,7 +5,7 @@ const Experience = () => {
     <section className="experience" id="experience">
       <div className="center">
         <h1 className="heading">
-          <span> my </span> internships
+          <span> my </span> experience
         </h1>
 
         <div className="box-container">
@@ -22,6 +22,10 @@ const Experience = () => {
                 comprehensive training.
                 <br />
                 Tech Stack: HTML, CSS, JavaScript, React, MongoDB
+                <a
+                  href="https://tripleten.com/trainer/web/lesson/6e33ab79-a71e-45fb-8fce-1dd9609e886b/?from=program"
+                  className="fas fa-share"
+                ></a>
               </p>
             </div>
           </div>

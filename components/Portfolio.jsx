@@ -37,11 +37,11 @@ const Portfolio = () => {
                 className="fas fa-link"
               ></a>
               <a
-                href="https://azatmusicapp.netlify.app"
+                href="https://shoppingazat.netlify.app/"
                 className="fas fa-share"
               ></a>
               <a
-                href="https://azatmusicapp.netlify.app"
+                href="https://shoppingazat.netlify.app/"
                 className="fas fa-search"
               ></a>
             </div>

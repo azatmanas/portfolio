@@ -462,25 +462,40 @@ header .follow a:hover {
   margin-bottom: 1.5rem;
 } */
 
+/* Fix for social icons spacing */
 .follow {
   display: flex;
-  justify-content: center; /* or 'flex-start' if you want left-aligned */
-  gap: 1rem; /* Adjust this value for spacing */
-  margin: 2rem 0; /* Optional: adds vertical spacing */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px; /* Adjust this value for spacing */
+  margin: 15px 0;
 }
 
 .follow a {
-  display: inline-flex;
+  margin: 0 !important;
+  width: 35px;
+  height: 35px;
+  font-size: 16px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 4rem;
-  height: 4rem;
-  background: rgba(255, 255, 255, 0.1);
   color: white;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  font-size: 2rem;
   transition: all 0.3s ease;
-  text-decoration: none;
+}
+
+.follow a:hover {
+  background: orange;
+  transform: scale(1.1);
+}
+
+/* Specific icon fixes */
+.follow .fa-facebook-f {
+  padding-right: 1px;
+}
+.follow .fa-twitter {
+  padding-left: 1px;
 }
 
 .footer {

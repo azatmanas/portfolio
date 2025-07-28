@@ -24,9 +24,9 @@ const About = () => {
 
             <div className="box-container">
               <div className="box">
-                <p>
+                {/* <p>
                   <span>Gender: </span> Male
-                </p>
+                </p> */}
                 <p>
                   <span>Born: </span> Kyrgyz Republic
                 </p>

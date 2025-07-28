@@ -47,17 +47,17 @@ const Header = () => {
       </nav>
 
       {/* Social Links */}
-      <div className="social-links">
+      <div className="social-links flex gap-6">
         {SOCIAL_LINKS.map((link) => (
           <a
             key={link.url}
             href={link.url}
-            className={`${link.iconClass} mx-2 hover:text-blue-400`}
+            className={`${link.iconClass} hover:text-blue-400`}
             aria-label={link.label}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="sr-only">{link.label}</span>
+            <span className="sr-only ">{link.label}</span>
           </a>
         ))}
       </div>

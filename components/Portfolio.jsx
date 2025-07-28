@@ -29,8 +29,8 @@ const Portfolio = () => {
           </div>
 
           <div className="box">
-            <img src="./images/nationalparks.png" alt="parks" />
-            <h3>Around the USA</h3>
+            <img src="./images/shopping1.jpg" alt="shopping" />
+            <h3>Quick Shopping</h3>
             <div className="icons">
               <a
                 href="https://github.com/azatmanas/se_project_aroundtheus"

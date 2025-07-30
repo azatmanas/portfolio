@@ -1,20 +1,20 @@
 import React from "react";
 import { useEffect, useRef, useState } from "react";
-
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 const SOCIAL_LINKS = [
   {
     url: "https://www.instagram.com/azar_manasson/",
-    iconClass: "fab fa-instagram",
+    icon: <FaInstagram />,
     label: "Instagram",
   },
   {
     url: "https://www.linkedin.com/in/azat-manas-264b14bb/",
-    iconClass: "fab fa-linkedin",
+    icon: <FaLinkedin />,
     label: "LinkedIn",
   },
   {
     url: "https://github.com/",
-    iconClass: "fab fa-github",
+    icon: <FaGithub />,
     label: "GitHub",
   },
 ];
@@ -74,17 +74,16 @@ const Header = () => {
       </nav>
 
       {/* Social Links */}
-      <div className="social-links flex gap-6">
+      <div className="follow">
         {SOCIAL_LINKS.map((link) => (
           <a
             key={link.url}
             href={link.url}
-            className={`${link.iconClass} hover:text-blue-400`}
             aria-label={link.label}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="sr-only ">{link.label}</span>
+            {link.icon}
           </a>
         ))}
       </div>

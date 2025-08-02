@@ -38,7 +38,7 @@ const About = () => {
                 </p>
                 <p>
                   <span>Tech course: </span> ZTM Frontend Developer, TripleTen
-                  Software Engineer
+                  Software Engineer Bootcamp
                 </p>
               </div>
 

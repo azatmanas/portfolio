@@ -13,50 +13,54 @@ const Contact = () => {
 
   const validate = () => {
     const newErrors = {};
-
-    if (!formValues.name.trim()) {
-      newErrors.name = "Name is required";
-    }
-
-    if (!formValues.email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formValues.email)) {
+    if (!formValues.name.trim()) newErrors.name = "Name is required";
+    if (!formValues.email.trim()) newErrors.email = "Email is required";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formValues.email))
       newErrors.email = "Enter a valid email address";
-    }
-
-    if (!formValues.message.trim()) {
-      newErrors.message = "Message is required";
-    } else if (formValues.message.trim().length < 10) {
+    if (!formValues.message.trim()) newErrors.message = "Message is required";
+    else if (formValues.message.trim().length < 10)
       newErrors.message = "Message must be at least 10 characters";
-    }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
   const handleChange = (e) => {
-    setFormValues({
-      ...formValues,
+    setFormValues((prev) => ({
+      ...prev,
       [e.target.name]: e.target.value,
-    });
+    }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (!validate()) return;
 
-    // Use native form submission to trigger Netlify form handling
-    e.target.submit();
+    // Include form-name for Netlify
+    const data = {
+      "form-name": "contact",
+      ...formValues,
+    };
 
-    // Optional: show a success message after submit
-    setIsSubmitted(true);
-
-    // Reset form values after a delay
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormValues({ name: "", email: "", message: "" });
-    }, 3000);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode(data),
+    })
+      .then(() => {
+        setIsSubmitted(true);
+        setFormValues({ name: "", email: "", message: "" });
+        setTimeout(() => setIsSubmitted(false), 3000);
+      })
+      .catch((error) => alert(error));
   };
 
   return (
@@ -77,12 +81,12 @@ const Contact = () => {
           </div>
 
           <form
-            className="contact-form"
             name="contact"
             method="POST"
             data-netlify="true"
             netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
+            className="contact-form"
           >
             <input type="hidden" name="form-name" value="contact" />
             <p style={{ display: "none" }}>
@@ -138,13 +142,13 @@ const Contact = () => {
               <label className="floating-label">Your Message</label>
               <textarea
                 name="message"
-                rows="3"
+                rows="4"
                 value={formValues.message}
                 onChange={handleChange}
                 onFocus={() => setActiveInput("message")}
                 onBlur={() => setActiveInput(null)}
                 required
-              ></textarea>
+              />
               <div className="input-underline"></div>
               {errors.message && (
                 <small className="error">{errors.message}</small>

@@ -1,4 +1,7 @@
 import React from "react";
+import WEATHER from "../src/assets/weather.png";
+import SHOPPING from "../src/assets/shopping1.jpg";
+import JOKE from "../src/assets/joke.png";
 
 const Portfolio = () => {
   return (
@@ -10,7 +13,7 @@ const Portfolio = () => {
 
         <div className="box-container">
           <div className="box">
-            <img src="./images/weather.png" alt="weather" />
+            <img src={WEATHER} alt="weather" />
             <h3>Weather</h3>
             <div className="icons">
               <a
@@ -29,7 +32,7 @@ const Portfolio = () => {
           </div>
 
           <div className="box">
-            <img src="./images/shopping1.jpg" alt="shopping" />
+            <img src={SHOPPING} alt="shopping" />
             <h3>Quick Shopping</h3>
             <div className="icons">
               <a
@@ -48,7 +51,7 @@ const Portfolio = () => {
           </div>
 
           <div className="box">
-            <img src="./images/joke.png" alt="Joke-Teller" />
+            <img src={JOKE} alt="Joke-Teller" />
             <h3>Joke-Teller</h3>
             <div className="icons">
               <a

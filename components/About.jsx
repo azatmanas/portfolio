@@ -1,4 +1,6 @@
 import React from "react";
+import Azat from "../src/assets/azat.JPG";
+import CV from "../src/assets/SWE.pdf";
 
 const About = () => {
   return (
@@ -10,7 +12,7 @@ const About = () => {
 
         <div className="row-1">
           <div className="image">
-            <img src="./images/azat.JPG" alt="Azat" />
+            <img src={Azat} alt="Azat" />
           </div>
 
           <div className="content">
@@ -59,7 +61,7 @@ const About = () => {
             </div>
 
             <div className="action-buttons">
-              <a href="./images/SWE.pdf" className="btn" download>
+              <a href={CV} className="btn" download>
                 Download CV
               </a>
               <a href="#contact" className="btn">

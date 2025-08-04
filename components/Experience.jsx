@@ -11,7 +11,7 @@ const Experience = () => {
         <div className="box-container">
           <div className="box">
             <div className="content">
-              <span>Tripleten Bootcamp USA 2024 - Present</span>
+              <span>Tripleten Bootcamp USA 2024 - 2025</span>
               <h3>Software Engineer</h3>
               <p>
                 Provide a transformative learning experience, combining hands-on

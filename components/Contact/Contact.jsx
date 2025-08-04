@@ -72,7 +72,10 @@ const Contact = () => {
           netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
         >
+          {/* Required hidden input for Netlify */}
           <input type="hidden" name="form-name" value="contact" />
+
+          {/* Honeypot field for bots */}
           <p style={{ display: "none" }}>
             <label>
               Don’t fill this out: <input name="bot-field" />
@@ -90,7 +93,6 @@ const Contact = () => {
               required
             />
             <label className="floating-label">Your Name</label>
-            <div className="input-underline"></div>
             {errors.name && <small className="error">{errors.name}</small>}
           </div>
 
@@ -105,7 +107,6 @@ const Contact = () => {
               required
             />
             <label className="floating-label">Your Email</label>
-            <div className="input-underline"></div>
             {errors.email && <small className="error">{errors.email}</small>}
           </div>
 
@@ -120,16 +121,14 @@ const Contact = () => {
               required
             />
             <label className="floating-label">Your Message</label>
-            <div className="input-underline"></div>
             {errors.message && (
               <small className="error">{errors.message}</small>
             )}
           </div>
 
-          {/* Button */}
+          {/* Submit */}
           <button type="submit" className="submit-btn">
-            <span className="btn-text">Send Message</span>
-            <span className="btn-icon">→</span>
+            Send Message →
           </button>
 
           {isSubmitted && (

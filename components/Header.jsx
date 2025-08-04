@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 const SOCIAL_LINKS = [
   {
-    url: "https://www.instagram.com/azar_manasson/",
+    url: "https://www.instagram.com/azat_manasson/",
     icon: <FaInstagram />,
     label: "Instagram",
   },

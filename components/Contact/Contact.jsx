@@ -59,9 +59,7 @@ const Contact = () => {
     <section className="contact-section" id="contact">
       <div className="contact-container">
         <h2 className="contact-title">
-          <span className="title-word title-word-1">Let's</span>
-          <span className="title-word title-word-2">Connect</span>
-          <span className="title-word title-word-3">!</span>
+          <span className="title-word title-word-1">Let's Connect!</span>
         </h2>
 
         <form
@@ -128,7 +126,7 @@ const Contact = () => {
 
           {/* Submit */}
           <button type="submit" className="submit-btn">
-            Send Message →
+            Send Message
           </button>
 
           {isSubmitted && (

@@ -1,6 +1,6 @@
 import React from "react";
 import Azat from "../src/assets/azat.JPG";
-import CV from "../src/assets/SWE.pdf";
+import CV from "../src/assets/Azat26.pdf";
 
 const About = () => {
   return (
